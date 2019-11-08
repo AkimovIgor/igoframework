@@ -17,11 +17,23 @@ class Router
         return self::$tableRoutes;
     }
 
+    /**
+     * Возвращает данные ткущего маршрута
+     *
+     * @return array
+     */
     public static function getCurrentRoute()
     {
         return self::$currentRoute;
     }
 
+    /**
+     * Ищет совпадение в таблице маршрутов с текущим маршрутом по регулярному выражению
+     *
+     * @param  string $url 
+     *
+     * @return boolean
+     */
     private static function matchRoutes($url)
     {
         foreach (self::$tableRoutes as $pattern => $route) {
@@ -41,8 +53,35 @@ class Router
         return false;
     }
 
+    /**
+     * Удаляем явные GET-параметры из адреснй строки
+     *
+     * @param  string $url 
+     *
+     * @return string
+     */
+    protected static function removeGetParams($url)
+    {
+        if ($url) {
+            $params = explode('&', $url);
+            if (! strpos($params[0], '=')) {
+                return rtrim($params[0], '/');
+            }
+        }
+        return '';
+    }
+
+    /**
+     * Перенаправляет запрос на нужный маршрут
+     *
+     * @param  string $url 
+     *
+     * @return string
+     */
     public static function dispatch($url)
     {
+        $url = self::removeGetParams($url);
+        
         if (self::matchRoutes($url)) {
             $controller = CONTROLLERS . self::upper(self::$currentRoute['controller']) . 'Controller';
             if (class_exists($controller)) {
@@ -62,11 +101,25 @@ class Router
         }
     }
 
+    /**
+     * Переводит первые буквы в верхний регистр
+     *
+     * @param  string $str 
+     *
+     * @return string
+     */
     public static function upper($str)
     {
         return str_replace(' ', '', ucwords(str_replace('-', ' ', $str)));
     }
 
+    /**
+     * Переводит первую букву в нижний регистр
+     *
+     * @param  string $str 
+     *
+     * @return string
+     */
     public static function lower($str)
     {
         return lcfirst(self::upper($str));

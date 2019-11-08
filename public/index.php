@@ -4,6 +4,8 @@ use Vendor\Igoframework\Core\Router;
 
 $query = rtrim($_SERVER['QUERY_STRING'], '/');
 
+header('Content-Type:text/html;charset=utf8');
+
 define('WWW', __DIR__);
 define('ROOT', dirname(__DIR__));
 define('APP', dirname(__DIR__) . '/app');

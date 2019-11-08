@@ -1,1 +1,1 @@
-<?= 'Hello ' . $name ?>
+<?= dd($posts, 0) ?>
