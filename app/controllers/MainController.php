@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Main;
+use Vendor\Igoframework\Core\App;
 
 class MainController extends BaseController
 {
@@ -11,8 +12,33 @@ class MainController extends BaseController
         $model = new Main();
 
         $posts = $model->findAll();
-
+        //dd(App::$app);
+        // $posts = App::$app->cache->getCache('posts');
+        // if (! $posts) {
+        //     $posts = $model->findAll();
+        //     App::$app->cache->setCache('posts', $posts, 10);
+        // }
+        $menu = $this->menu;
         $meta = $this->setMeta('Главная', 'главная страница');
-        $this->setVars(compact('posts', 'meta'));
+        $this->setVars(compact('menu', 'posts', 'meta'));
+    }
+
+    public function testAction()
+    {
+        $model = new Main;
+        
+        if ($this->isAjax()) {
+            $post = $model->findOne($_POST['id']);
+            $this->loadView('test', compact('post'));
+            die;
+        }
+        $menu = $this->menu;
+        $meta = $this->setMeta('Главная', 'главная страница');
+        $this->setVars(compact('menu', 'post', 'meta'));
+    }
+
+    public function newAction()
+    {
+
     }
 }

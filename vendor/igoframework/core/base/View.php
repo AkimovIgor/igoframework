@@ -2,11 +2,14 @@
 
 namespace Vendor\Igoframework\Core\Base;
 
+use Vendor\Igoframework\Core\Exceptions\NotFoundException;
+
 class View
 {
     protected $route = [];
     protected $layout;
     protected $view;
+    public $scripts = [];
 
     public function __construct($route, $layout = '', $view = '')
     {
@@ -31,7 +34,7 @@ class View
         if (is_file($fileView)) {
             require_once $fileView;
         } else {
-            echo 'View not found';
+            throw new NotFoundException("Вид {$fileView} не найден", 404);
         }
 
         $content = ob_get_clean();
@@ -39,10 +42,27 @@ class View
         if ($this->layout !== false) {
             $fileLayout = APP . "/views/layouts/$this->layout.php";
             if (is_file($fileLayout)) {
+                $content = $this->getScripts($content);
+                $scripts = [];
+                if (!empty($this->scripts[0])) {
+                    $scripts = $this->scripts[0];
+                }
                 require_once $fileLayout;
             } else {
                 echo 'Layout not found';
             }
         }
+    }
+
+    public function getScripts($content)
+    {
+        $pattern = "#<script.*?>.*?</script>#si";
+
+        preg_match_all($pattern, $content, $this->scripts);
+        
+        if (!empty($this->scripts)) {
+            $content = preg_replace($pattern, '', $content);
+        }
+        return $content;
     }
 }

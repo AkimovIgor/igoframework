@@ -1,0 +1,104 @@
+[ 2019-11-10 17:11:22 ] | Сообщение: Undefined variable: text | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\app\controllers\MainController.php | Строка: 15
+
+->
+
+[ 2019-11-10 17:11:22 ] | Сообщение: Call to undefined function App\Controllers\text() | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\app\controllers\MainController.php | Строка: 15
+
+->
+
+[ 2019-11-10 17:11:23 ] | Сообщение: Контроллер App\Controllers\MaindController не найден. | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 99
+
+->
+
+[ 2019-11-10 17:11:24 ] | Сообщение: Error Processing Request | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 102
+
+->
+
+[ 2019-11-10 17:11:24 ] | Сообщение: Error Processing Request | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 102
+
+->
+
+[ 2019-11-10 17:11:25 ] | Сообщение: Страница не найдена | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 102
+
+->
+
+[ 2019-11-10 17:11:26 ] | Сообщение: Контроллер App\Controllers\MaiwefController не найден. | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 99
+
+->
+
+[ 2019-11-10 17:11:26 ] | Сообщение: Страница не найдена | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 102
+
+->
+
+[ 2019-11-10 17:11:27 ] | Сообщение: Страница не найдена | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 102
+
+->
+
+[ 2019-11-10 17:11:27 ] | Сообщение: Страница не найдена | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 102
+
+->
+
+[ 2019-11-10 17:11:27 ] | Сообщение: Страница не найдена | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 102
+
+->
+
+[ 2019-11-10 17:11:33 ] | Сообщение: Страница не найдена | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 102
+
+->
+
+[ 2019-11-10 17:11:36 ] | Сообщение: Страница не найдена | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 102
+
+->
+
+[ 2019-11-10 17:11:37 ] | Сообщение: Страница не найдена | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 102
+
+->
+
+[ 2019-11-10 17:11:37 ] | Сообщение: Страница не найдена | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 102
+
+->
+
+[ 2019-11-10 17:11:40 ] | Сообщение: Страница не найдена | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 102
+
+->
+
+[ 2019-11-10 17:11:40 ] | Сообщение: Контроллер App\Controllers\MaindController не найден. | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 99
+
+->
+
+[ 2019-11-10 17:11:40 ] | Сообщение: Контроллер App\Controllers\MaindController не найден. | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 99
+
+->
+
+[ 2019-11-10 17:11:40 ] | Сообщение: Контроллер App\Controllers\MaindController не найден. | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 99
+
+->
+
+[ 2019-11-10 17:11:40 ] | Сообщение: Контроллер App\Controllers\MaindController не найден. | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 99
+
+->
+
+[ 2019-11-10 17:11:40 ] | Сообщение: Контроллер App\Controllers\MaindController не найден. | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 99
+
+->
+
+[ 2019-11-10 17:11:40 ] | Сообщение: Контроллер App\Controllers\MaindController не найден. | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 99
+
+->
+
+[ 2019-11-10 17:11:42 ] | Сообщение: Контроллер App\Controllers\MaindController не найден. | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 99
+
+->
+
+[ 2019-11-10 17:11:42 ] | Сообщение: Контроллер App\Controllers\MainfController не найден. | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 99
+
+->
+
+[ 2019-11-10 17:11:43 ] | Сообщение: Undefined variable: post | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\app\views\main\test.php | Строка: 4
+
+->
+
+[ 2019-11-10 17:11:44 ] | Сообщение: Контроллер App\Controllers\MaindController не найден. | Файл: D:\Programs\Open_Server\OSPanel\domains\myframework\vendor\igoframework\core\routing\Router.php | Строка: 99
+
+->
+

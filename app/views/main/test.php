@@ -1,5 +1,4 @@
-
-<?php foreach ($posts as $post): ?>
+<h1>Hello World!</h1>
 <div class="card bg-light mb-3">
   <div class="card-header">
     <?= $post['title'] ?>    
@@ -8,7 +7,5 @@
     <p class="card-text">
         <?= $post['text'] ?>
     </p>
-    <a class="btn btn-primary ajax-btn" data-href="<?= $post['id'] ?>">Button</a>
   </div>
 </div>
-<?php endforeach; ?>

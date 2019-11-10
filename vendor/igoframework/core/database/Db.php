@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\Igoframework\Core;
+namespace Vendor\Igoframework\Core\Database;
 
 class Db
 {

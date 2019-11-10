@@ -27,4 +27,17 @@ abstract class Controller
         $vObj = new View($this->route, $this->layout, $this->view);
         $vObj->render($this->vars);
     }
+
+    public function isAjax()
+    {
+        return (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest' );
+    }
+
+    public function loadView($view, $vars = [])
+    {
+        if (!empty($vars)) {
+            extract($vars);
+        }
+        require_once APP . "/views/{$this->route['controller']}/$view.php";
+    }
 }

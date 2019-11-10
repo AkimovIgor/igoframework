@@ -1,6 +1,8 @@
 <?php
 
-namespace Vendor\Igoframework\Core;
+namespace Vendor\Igoframework\Core\Routing;
+
+use Vendor\Igoframework\Core\Exceptions\NotFoundException;
 
 class Router
 {
@@ -91,13 +93,13 @@ class Router
                     $cObj->$action();
                     $cObj->getView();
                 } else {
-                    echo 'Action not found';
+                    throw new NotFoundException("Экшен {$controller}::{$action} не найден.", 503);
                 }
             } else {
-                echo 'Controller not found';
+                throw new NotFoundException("Контроллер {$controller} не найден.", 503);
             }
         } else {
-            echo '404';
+            throw new NotFoundException("Страница не найдена", 404);
         }
     }
 

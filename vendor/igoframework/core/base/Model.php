@@ -2,7 +2,7 @@
 
 namespace Vendor\Igoframework\Core\Base;
 
-use Vendor\Igoframework\Core\Db;
+use Vendor\Igoframework\Core\Database\Db;
 
 abstract class Model extends Db
 {
