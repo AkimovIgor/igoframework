@@ -1,8 +1,8 @@
 <?php
 
-namespace Vendor\Igoframework\Core\Base;
+namespace Igoframework\Core\Base;
 
-use Vendor\Igoframework\Core\Database\Db;
+use Igoframework\Core\Database\Db;
 
 abstract class Model extends Db
 {
@@ -13,6 +13,11 @@ abstract class Model extends Db
     public function __construct()
     {
         $this->pdo = Db::getInstance();
+    }
+
+    public function getTable()
+    {
+        return $this->table;
     }
 
     public function query($sql, $params = [])
@@ -177,5 +182,22 @@ abstract class Model extends Db
         $key = $key ?: $this->pKey;
         $sql = "DELETE FROM $this->table WHERE $key $sign ?";
         $this->pdo->execute($sql, [$value]);
+    }
+
+    public function getAssoc($params = [])
+    {
+        $sql = "SELECT * FROM $this->table";
+        $arr = $this->pdo->query($sql, $params);
+        $arrCommon = [];
+        foreach ($arr as $key => $value) {
+            $val = [];
+            foreach ($value as $k => $v) {
+                if ($k != 'id') {
+                    $val[$k] = $v;
+                }
+            }
+            $arrCommon[$value['id']] = $val;
+        }
+        return $arrCommon;
     }
 }

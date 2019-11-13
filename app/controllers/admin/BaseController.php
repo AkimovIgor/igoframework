@@ -1,20 +1,15 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\Admin;
 
 use Igoframework\Core\Base\Controller;
-use App\Models\Category;
 
 class BaseController extends Controller
 {
-    protected $menu;
+    protected $layout = 'admin';
 
     public function __construct($route)
     {
         parent::__construct($route);
-        $model = new Category();
-        $this->menu = $model->findAll();
     }
-
-    
 }

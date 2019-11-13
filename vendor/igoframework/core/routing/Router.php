@@ -1,8 +1,8 @@
 <?php
 
-namespace Vendor\Igoframework\Core\Routing;
+namespace Igoframework\Core\Routing;
 
-use Vendor\Igoframework\Core\Exceptions\NotFoundException;
+use Igoframework\Core\Exceptions\NotFoundException;
 
 class Router
 {
@@ -48,6 +48,11 @@ class Router
                 if (! isset($route['action'])) {
                     $route['action'] = 'index';
                 }
+                if (! isset($route['prefix'])) {
+                    $route['prefix'] = '';
+                } else {
+                    $route['prefix'] .= '\\';
+                }
                 self::$currentRoute = $route;
                 return true;
             }
@@ -85,7 +90,9 @@ class Router
         $url = self::removeGetParams($url);
         
         if (self::matchRoutes($url)) {
-            $controller = CONTROLLERS . self::upper(self::$currentRoute['controller']) . 'Controller';
+            $controller = CONTROLLERS 
+                . self::upper(self::$currentRoute['prefix'])
+                . self::upper(self::$currentRoute['controller']) . 'Controller';
             if (class_exists($controller)) {
                 $cObj = new $controller(self::$currentRoute);
                 $action = self::lower(self::$currentRoute['action']) . 'Action';

@@ -1,8 +1,8 @@
 <?php
 
-namespace Vendor\Igoframework\Core\Base;
+namespace Igoframework\Core\Base;
 
-use Vendor\Igoframework\Core\Base\View;
+use Igoframework\Core\Base\View;
 
 abstract class Controller
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\Igoframework\Core\Cache;
+namespace Igoframework\Core\Cache;
 
 class CacheManager
 {

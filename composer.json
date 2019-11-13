@@ -1,0 +1,10 @@
+{
+    "name": "igoframework",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Igoframework\\": "vendor/igoframework",
+            "App\\": "app"
+        }
+    }
+}

@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Vendor\Igoframework\Core\Base\Model;
+use Igoframework\Core\Base\Model;
 
 class Category extends Model
 {

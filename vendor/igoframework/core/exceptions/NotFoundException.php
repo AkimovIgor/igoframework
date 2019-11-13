@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\Igoframework\Core\Exceptions;
+namespace Igoframework\Core\Exceptions;
 
 
 class NotFoundException extends \Exception

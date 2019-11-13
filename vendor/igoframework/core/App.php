@@ -1,8 +1,8 @@
 <?php
 
-namespace Vendor\Igoframework\Core;
+namespace Igoframework\Core;
 
-use Vendor\Igoframework\Core\Exceptions\ExceptionsHandler;
+use Igoframework\Core\Exceptions\ExceptionsHandler;
 
 class App
 {

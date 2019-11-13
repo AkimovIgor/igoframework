@@ -1,0 +1,169 @@
+a:2:{s:4:"data";s:4218:"<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="?id=1" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категория 1</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                <li class="dropdown-item dropdown">
+  <a href="?id=3" class="dropdown-toggle" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категория 3</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                <li class="dropdown-item ">
+  <a href="?id=7">Категория 7</a>
+         
+ 
+  
+
+
+        </ul>
+    </li>
+     
+ 
+  
+
+
+    <li class="dropdown-item ">
+  <a href="?id=5">Категория 5</a>
+         
+ 
+  
+
+
+        </ul>
+     
+  </li>
+ 
+  
+
+
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="?id=2" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категория 2</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <li class="dropdown-item ">
+  <a href="?id=4">Категория 4</a>
+         
+ 
+  
+
+
+        </ul>
+     
+  </li>
+ 
+  
+
+
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="?id=6" id="navbarDropdown6" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категория 6</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown6">
+                <li class="dropdown-item dropdown">
+  <a href="?id=8" class="dropdown-toggle" id="navbarDropdown8" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категория 8</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown8">
+                <li class="dropdown-item dropdown">
+  <a href="?id=9" class="dropdown-toggle" id="navbarDropdown9" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категория 9</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown9">
+                <li class="dropdown-item dropdown">
+  <a href="?id=10" class="dropdown-toggle" id="navbarDropdown10" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категория 10</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown10">
+                <li class="dropdown-item dropdown">
+  <a href="?id=11" class="dropdown-toggle" id="navbarDropdown11" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категория 11</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown11">
+                <li class="dropdown-item ">
+  <a href="?id=12">Категория 12</a>
+         
+ 
+  
+
+
+        </ul>
+    </li>
+     
+ 
+  
+
+
+    <li class="dropdown-item ">
+  <a href="?id=14">Категория 14</a>
+         
+ 
+  
+
+
+    <li class="dropdown-item ">
+  <a href="?id=15">Категория 15</a>
+         
+ 
+  
+
+
+        </ul>
+    </li>
+     
+ 
+  
+
+
+        </ul>
+    </li>
+     
+ 
+  
+
+
+    <li class="dropdown-item dropdown">
+  <a href="?id=16" class="dropdown-toggle" id="navbarDropdown16" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категория 16</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown16">
+                <li class="dropdown-item ">
+  <a href="?id=17">Категория 17</a>
+         
+ 
+  
+
+
+    <li class="dropdown-item ">
+  <a href="?id=18">Категория 18</a>
+         
+ 
+  
+
+
+    <li class="dropdown-item ">
+  <a href="?id=19">Категория 19</a>
+         
+ 
+  
+
+
+    <li class="dropdown-item ">
+  <a href="?id=20">Категория 20</a>
+         
+ 
+  
+
+
+        </ul>
+    </li>
+     
+ 
+  
+
+
+        </ul>
+    </li>
+     
+ 
+  
+
+
+        </ul>
+     
+  </li>
+ 
+  
+
+
+<li class="nav-item ">
+    <a class="nav-link " href="?id=13" >Категория 13</a>
+     
+  </li>
+ 
+  
+
+
+";s:9:"life_time";i:1573662128;}

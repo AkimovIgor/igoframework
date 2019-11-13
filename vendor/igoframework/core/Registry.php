@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\Igoframework\Core;
+namespace Igoframework\Core;
 
 class Registry
 {

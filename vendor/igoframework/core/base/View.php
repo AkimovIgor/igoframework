@@ -1,15 +1,20 @@
 <?php
 
-namespace Vendor\Igoframework\Core\Base;
+namespace Igoframework\Core\Base;
 
-use Vendor\Igoframework\Core\Exceptions\NotFoundException;
+use Igoframework\Core\Exceptions\NotFoundException;
 
 class View
 {
-    protected $route = [];
-    protected $layout;
-    protected $view;
-    public $scripts = [];
+    protected $route = [];        // текущий маршрут
+    protected $layout;            // текущий шаблон
+    protected $view;              // текущий вид
+    public $scripts = [];         // массив скриптов
+    protected static $meta = [    // массив мета-данных
+        'title' => '',
+        'description' => '',
+        'keywords' => '',
+    ];
 
     public function __construct($route, $layout = '', $view = '')
     {
@@ -30,7 +35,7 @@ class View
 
         ob_start();
 
-        $fileView = APP . "/views/{$this->route['controller']}/$this->view.php";
+        $fileView = APP . "/views/{$this->route['prefix']}{$this->route['controller']}/$this->view.php";
         if (is_file($fileView)) {
             require_once $fileView;
         } else {
@@ -49,7 +54,7 @@ class View
                 }
                 require_once $fileLayout;
             } else {
-                echo 'Layout not found';
+                throw new NotFoundException("Шаблон {$fileLayout} не найден", 404);
             }
         }
     }
@@ -64,5 +69,19 @@ class View
             $content = preg_replace($pattern, '', $content);
         }
         return $content;
+    }
+
+    public static function setMeta($title = '', $description = '', $keywords = '')
+    {
+        self::$meta['title'] = $title;
+        self::$meta['description'] = $description;
+        self::$meta['keywords'] = $keywords;
+    }
+
+    public static function getMeta()
+    {
+        echo '<title>' . self::$meta['title'] . '</title>';
+        echo '<meta name="description" content="' . self::$meta['description'] . '">';
+        echo '<meta name="keywords" content="' . self::$meta['keywords'] . '">';
     }
 }

@@ -2,6 +2,6 @@
 
 return [
     'components' => [
-        'cache' => 'Vendor\Igoframework\Core\Cache\CacheManager'
+        'cache' => 'Igoframework\Core\Cache\CacheManager'
     ]
 ];
