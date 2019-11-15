@@ -17,7 +17,6 @@ use Igoframework\Core\Base\View;
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
 
-    
   </head>
   <body>
     <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
@@ -34,10 +33,31 @@ use Igoframework\Core\Base\View;
             'class' => 'navbar-nav mr-auto'
         ]); ?>
 
-        <form class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav ml-auto">
+          <?php if (isset($_SESSION['user'])): ?>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <?= $_SESSION['user']['name'] ?>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="/user/profile">Профиль</a>
+                  <a class="dropdown-item" href="/user/logout">Выход</a>
+              </div>
+          </li>
+          <?php else: ?>
+              <li class="nav-item">
+                  <a class="nav-link" href="/user/login">Вход</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/user/register">Регистрация</a>
+              </li>
+          <?php endif; ?>
+        </ul>
+
+        <!-- <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        </form> -->
       </div>
     </nav>
     <main class="py-4">

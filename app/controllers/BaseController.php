@@ -15,6 +15,4 @@ class BaseController extends Controller
         $model = new Category();
         $this->menu = $model->findAll();
     }
-
-    
 }

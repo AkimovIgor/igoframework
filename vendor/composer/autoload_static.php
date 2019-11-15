@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit82471bdff272d3c5119a0ef537e1001b
 {
     public static $prefixLengthsPsr4 = array (
+        'V' => 
+        array (
+            'Valitron\\' => 9,
+        ),
         'I' => 
         array (
             'Igoframework\\' => 13,
@@ -18,6 +22,10 @@ class ComposerStaticInit82471bdff272d3c5119a0ef537e1001b
     );
 
     public static $prefixDirsPsr4 = array (
+        'Valitron\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vlucas/valitron/src/Valitron',
+        ),
         'Igoframework\\' => 
         array (
             0 => __DIR__ . '/..' . '/igoframework',

@@ -2,10 +2,13 @@
 
 namespace Igoframework\Core;
 
+use Igoframework\Core\Traits\TSingletone;
+
 class Registry
 {
+    use TSingletone;
+
     private static $objects = [];
-    private static $instance;
 
     private function __construct()
     {
@@ -13,14 +16,6 @@ class Registry
         foreach ($config['components'] as $name => $object) {
             self::$objects[$name] = new $object;
         }
-    }
-
-    public static function getInstance()
-    {
-        if (self::$instance instanceof self) {
-            return self::$instance;
-        }
-        return self::$instance = new self;
     }
 
     public static function get($name)

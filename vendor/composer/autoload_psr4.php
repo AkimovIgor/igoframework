@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Valitron\\' => array($vendorDir . '/vlucas/valitron/src/Valitron'),
     'Igoframework\\' => array($vendorDir . '/igoframework'),
     'App\\' => array($baseDir . '/app'),
 );

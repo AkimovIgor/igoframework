@@ -6,21 +6,34 @@ use Igoframework\Core\Exceptions\NotFoundException;
 
 class Router
 {
-    public static $tableRoutes = [];
-    public static $currentRoute = [];
+    public static $tableRoutes = [];      // таблица маршрутов
+    public static $currentRoute = [];     // текущий маршрут
 
+    /**
+     * Добавить новый маршрут
+     *
+     * @param string $regExp Регулярное выражение 
+     * @param array $route Новый маршрут
+     *
+     * @return void
+     */
     public static function add($regExp, $route = [])
     {
         self::$tableRoutes[$regExp] = $route;
     }
 
+    /**
+     * Возвращает таблицу маршрутов
+     *
+     * @return array
+     */
     public static function getTableRoutes()
     {
         return self::$tableRoutes;
     }
 
     /**
-     * Возвращает данные ткущего маршрута
+     * Возвращает данные текущего маршрута
      *
      * @return array
      */
@@ -88,11 +101,11 @@ class Router
     public static function dispatch($url)
     {
         $url = self::removeGetParams($url);
-        
         if (self::matchRoutes($url)) {
             $controller = CONTROLLERS 
                 . self::upper(self::$currentRoute['prefix'])
                 . self::upper(self::$currentRoute['controller']) . 'Controller';
+                dd($controller, 0);
             if (class_exists($controller)) {
                 $cObj = new $controller(self::$currentRoute);
                 $action = self::lower(self::$currentRoute['action']) . 'Action';

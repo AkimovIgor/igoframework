@@ -2,9 +2,12 @@
 
 namespace Igoframework\Core\Database;
 
+use Igoframework\Core\Traits\TSingletone;
+
 class Db
 {
-    private static $instance;
+    use TSingletone;
+
     protected $pdo;
 
     private function __construct()
@@ -13,24 +16,28 @@ class Db
         $this->pdo = new \PDO($db['dsn'], $db['user'], $db['password'], $db['options']);
     }
 
-    private function __clone() {}
-
-    private function __wakeup() {}
-
-    public static function getInstance()
-    {
-        if (self::$instance instanceof self) {
-            return self::$instance;
-        }
-        return self::$instance = new self;
-    }
-
+    /**
+     * Выполнить подготовленный запрос и вернуть результат
+     *
+     * @param  string $sql SQL-запрос
+     * @param  array $params Массив подготовленных параметров
+     *
+     * @return boolean
+     */
     public function execute($sql, $params = [])
     {
         $stmt = $this->pdo->prepare($sql);
         return $stmt->execute($params);
     }
 
+    /**
+     * Выполнить подготовленный запрос и вернуть данные всех строк
+     *
+     * @param  string $sql SQL-запрос
+     * @param  array $params Массив подготовленных параметров
+     *
+     * @return array
+     */
     public function query($sql, $params = [])
     {
         $stmt = $this->pdo->prepare($sql);
@@ -41,6 +48,14 @@ class Db
         return [];
     }
 
+    /**
+     * Выполнить подготовленный запрос и вернуть данные одной сроки
+     *
+     * @param  string $sql SQL-запрос
+     * @param  array $params Массив подготовленных параметров
+     *
+     * @return boolean
+     */
     public function queryFetch($sql, $params = [])
     {
         $stmt = $this->pdo->prepare($sql);
